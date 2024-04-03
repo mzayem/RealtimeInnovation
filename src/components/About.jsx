@@ -54,6 +54,14 @@ const AboutContainer = styled.div`
   }
 
   @media screen and (max-width: 960px) {
+    .heading {
+      padding: 1rem 0rem;
+    }
+    .heading h2,
+    .desc {
+      text-align: center;
+    }
+
     .content {
       flex-direction: column;
 
@@ -89,7 +97,9 @@ export default function About() {
         <h3>About</h3>
         <h2>Our Culture and Values</h2>
       </div>
-      <p>We nurture a culture based on strong values and positive behaviors.</p>
+      <p className="desc">
+        We nurture a culture based on strong values and positive behaviors.
+      </p>
       <div className="content">
         <div className="item-container">
           <Item>

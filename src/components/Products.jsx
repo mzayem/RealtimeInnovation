@@ -39,6 +39,7 @@ const ProductsContainer = styled.div`
     background: #22252d;
     padding: 4rem 2rem;
     border-radius: 1rem;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     flex-direction: column;
