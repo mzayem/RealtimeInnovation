@@ -60,6 +60,7 @@ const CareerContainer = styled.div`
     li {
       color: #979f9e;
       padding: 0;
+      text-align: left;
     }
 
     button {
