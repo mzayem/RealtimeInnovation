@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LinkedIn from "../assets/linkedin.png";
+import EmailIcon from "../assets/formkit_email.png";
 
 const ContactContainer = styled.section`
   background-color: #222222;
@@ -29,9 +30,11 @@ const ContactContainer = styled.section`
   a.link {
     color: #f1ff28;
     background: black;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     width: max-content;
+    font-size: 1.125rem;
+    font-weight: 400;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -44,6 +47,13 @@ const ContactContainer = styled.section`
   img {
     width: 40px;
     height: 40px;
+  }
+
+  img.email {
+    height: 24px;
+    width: auto;
+    margin-right: 0.125rem;
+    object-fit: cover;
   }
   @media screen and (max-width: 768px) {
     padding: 1rem;
@@ -58,17 +68,7 @@ export default function Contact() {
         <h2>Connect With Us</h2>
       </div>
       <a href="mailto:hello@realtime-innovations.com" className="link">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          className="bi bi-envelope"
-          viewBox="0 0 16 16"
-          color="#f1ff28"
-        >
-          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
-        </svg>
+        <img className="email" src={EmailIcon} />
         hello@realtime-innovations.com
       </a>
       <a href="#">

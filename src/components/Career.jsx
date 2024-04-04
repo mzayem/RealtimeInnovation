@@ -38,7 +38,7 @@ const CareerContainer = styled.section`
 
   .card {
     background: #22252d;
-    padding: 4rem;
+    padding: 3rem;
     flex-grow: 1;
     border-radius: 1rem;
     display: flex;

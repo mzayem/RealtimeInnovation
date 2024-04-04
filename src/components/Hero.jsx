@@ -2,7 +2,7 @@ import styled from "styled-components";
 import HeroImage from "../assets/hero-background.jpeg";
 
 const HomeContainer = styled.section`
-  padding: 12rem 5rem;
+  padding: 10rem 5rem;
   position: relative;
   h1 {
     font-weight: 400;
@@ -11,7 +11,7 @@ const HomeContainer = styled.section`
     span {
       color: #eafb27;
     }
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     z-index: 1;
   }
 
