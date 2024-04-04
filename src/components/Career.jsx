@@ -77,6 +77,10 @@ const CareerContainer = styled.div`
         cursor: pointer;
       }
     }
+    img {
+      height: 50px;
+      width: auto;
+    }
   }
 
   @media screen and (max-width: 768px) {

@@ -48,8 +48,12 @@ const AboutContainer = styled.div`
     justify-content: space-between;
 
     .graphic {
-      max-width: 100%;
-      height: auto;
+      width: auto;
+      height: 500px;
+    }
+    img {
+      width: 80px;
+      height: 80px;
     }
   }
 
@@ -66,7 +70,12 @@ const AboutContainer = styled.div`
       flex-direction: column;
 
       .graphic {
-        width: 100%;
+        width: auto;
+        height: 500px;
+      }
+      img {
+        width: 80px;
+        height: 80px;
       }
     }
     padding: 1rem;

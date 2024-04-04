@@ -40,6 +40,11 @@ const ContactContainer = styled.div`
   a {
     margin: 0 auto;
   }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
   @media screen and (max-width: 768px) {
     padding: 1rem;
   }

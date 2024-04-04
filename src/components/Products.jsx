@@ -59,6 +59,10 @@ const ProductsContainer = styled.div`
       color: #949c9b;
       margin: 0;
     }
+    img {
+      width: 95px;
+      height: 95px;
+    }
   }
 
   @media screen and (max-width: 768px) {

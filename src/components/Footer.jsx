@@ -18,6 +18,10 @@ const FooterContainer = styled.footer`
       justify-content: flex-end;
     }
   }
+  img {
+    width: 40px;
+    height: auto;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 1rem;

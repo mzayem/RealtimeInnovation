@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HeroImage from "../assets/hero-background.png";
+import HeroImage from "../assets/hero-background.jpeg";
 
 const HomeContainer = styled.div`
   padding: 12rem 5rem;
