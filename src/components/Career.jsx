@@ -4,7 +4,7 @@ import Frontend from "../assets/frontend.png";
 import UIUX from "../assets/ui-ux.png";
 import Automation from "../assets/qa-automation.png";
 
-const CareerContainer = styled.div`
+const CareerContainer = styled.section`
   background: black;
   padding: 5rem;
   display: flex;

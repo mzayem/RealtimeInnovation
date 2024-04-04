@@ -3,7 +3,7 @@ import MeAI from "../assets/me_ai.png";
 import MeDaily from "../assets/me_daily.png";
 import MeJunior from "../assets/me_junior.png";
 
-const ProductsContainer = styled.div`
+const ProductsContainer = styled.section`
   background: black;
   padding: 5rem;
   display: flex;

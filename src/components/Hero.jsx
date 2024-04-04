@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import HeroImage from "../assets/hero-background.jpeg";
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.section`
   padding: 12rem 5rem;
   position: relative;
   h1 {
@@ -68,7 +68,7 @@ const HomeContainer = styled.div`
 
 export default function Hero() {
   return (
-    <HomeContainer id="Home">
+    <HomeContainer id="home">
       <div
         style={{ zIndex: 2, position: "relative" }}
         className="text-container"

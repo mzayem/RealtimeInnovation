@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import Logo from "../assets/navbar-logo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = styled.nav`
   padding: 1rem 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #000000;
   img.logo {
     height: 48px;
     object-fit: cover;
@@ -26,7 +30,8 @@ const Navbar = styled.nav`
       font-size: 1.125rem;
       position: relative;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: #eafb27;
         &::before {
           content: "";
@@ -69,6 +74,10 @@ const MobileDropdown = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 5;
   a {
     all: unset;
     color: white;
@@ -76,6 +85,10 @@ const MobileDropdown = styled.div`
     padding: 2.5rem;
     text-align: center;
     background: #22252d;
+
+    &.active {
+      background-color: #4e5464;
+    }
   }
 `;
 
@@ -89,6 +102,41 @@ const routes = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 300; // Add some offset to adjust for navbar height
+
+      // Find the active section based on scroll position
+      let currentSectionId = "";
+      routes.forEach((route) => {
+        const section = document.querySelector(route.href);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionHeight
+          ) {
+            currentSectionId = route.href.slice(1); // Extract the section ID from the href
+          }
+        }
+      });
+
+      // Update active section state
+      setActiveSection(currentSectionId);
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Navbar>
@@ -96,7 +144,13 @@ export default function Header() {
           <img className="logo" src={Logo} />
           <div className="nav-links">
             {routes.map((route) => (
-              <a href={route.href} key={route.href}>
+              <a
+                href={route.href}
+                className={
+                  activeSection === route.href.slice(1) ? "active" : null
+                }
+                key={route.href}
+              >
                 {route.label}
               </a>
             ))}
@@ -139,6 +193,7 @@ export default function Header() {
           <a
             href={route.href}
             key={route.href}
+            className={activeSection === route.href.slice(1) ? "active" : null}
             onClick={() => setOpen((prev) => !prev)}
           >
             {route.label}

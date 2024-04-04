@@ -6,7 +6,7 @@ import ResponsiveImage from "../assets/ic-responsive.png";
 import SupportiveImage from "../assets/ic-supportive.png";
 import AboutGraphic from "../assets/AboutGraphic.png";
 
-const AboutContainer = styled.div`
+const AboutContainer = styled.section`
   background-color: #222222;
   padding: 5rem;
   display: flex;

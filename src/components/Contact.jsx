@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import LinkedIn from "../assets/linkedin.png";
 
-const ContactContainer = styled.div`
+const ContactContainer = styled.section`
   background-color: #222222;
   padding: 5rem;
   display: flex;

@@ -9,7 +9,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div>
+    <main>
       <Header />
       <Hero />
       <Products />
@@ -17,6 +17,6 @@ export default function App() {
       <Career />
       <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }
