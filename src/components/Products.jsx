@@ -58,6 +58,7 @@ const ProductsContainer = styled.section`
     p {
       color: #949c9b;
       margin: 0;
+      max-width: 1200px;
     }
     img {
       width: 95px;
