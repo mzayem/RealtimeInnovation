@@ -10,6 +10,7 @@ const CareerContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 
   .heading {
     display: flex;
@@ -34,6 +35,8 @@ const CareerContainer = styled.section`
     align-items: center;
     gap: 1rem;
     justify-content: center;
+    max-width: 1200px;
+    width: 100%;
   }
 
   .card {

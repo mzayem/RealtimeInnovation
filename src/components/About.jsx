@@ -12,6 +12,7 @@ const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  align-items: center;
 
   .heading {
     display: flex;
@@ -46,6 +47,8 @@ const AboutContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
 
     .graphic {
       width: auto;

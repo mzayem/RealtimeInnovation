@@ -4,6 +4,15 @@ import HeroImage from "../assets/hero-background.jpeg";
 const HomeContainer = styled.section`
   padding: 10rem 5rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  .text-container {
+    max-width: 1200px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
   h1 {
     font-weight: 400;
     font-size: 3rem;
