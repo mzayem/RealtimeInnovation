@@ -73,8 +73,8 @@ const AboutContainer = styled.section`
       flex-direction: column;
 
       .graphic {
-        width: auto;
-        height: 500px;
+        width: 300px;
+        height: auto;
       }
       img {
         width: 80px;
